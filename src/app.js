@@ -91,7 +91,7 @@ fetch("http://localhost:3000/weather?address=Djibouti").then(
 //     console.log("server started on port 3000");
 
 // })
-app.listen(PORT, () => {
-    console.log("server started on port " + PORT);
+app.listen(port, () => {
+    console.log("server started on port " + port);
 
 })
