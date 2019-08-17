@@ -4,12 +4,13 @@ const cors = require('cors')
 const geo = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 const fetch = require("node-fetch");
-const port = process.env.PORT || 3000
 console.log(__dirname)
 console.log(path.join(__dirname, '../../weatherApp/src'));
 
 
 const app = express()
+const port = process.env.PORT || 3000
+
 const frontend = path.join(__dirname, '../public')
 var corsOptions = {
     origin: 'http://localhost:4200',
