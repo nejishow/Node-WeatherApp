@@ -4,7 +4,7 @@ const cors = require('cors')
 const geo = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 const fetch = require("node-fetch");
-
+const port = process.env.PORT || 3000
 console.log(__dirname)
 console.log(path.join(__dirname, '../../weatherApp/src'));
 
@@ -86,7 +86,11 @@ fetch("http://localhost:3000/weather?address=Djibouti").then(
 );
 
 
-app.listen(3000, () => {
-    console.log("server started on port 3000");
+// app.listen(3000, () => {    without heroku
+//     console.log("server started on port 3000");
+
+// })
+app.listen(PORT, () => {
+    console.log("server started on port " + PORT);
 
 })
